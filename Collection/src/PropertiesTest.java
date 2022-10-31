@@ -7,7 +7,7 @@ public class PropertiesTest {
 
 	public static void main(String[] args) {
 		
-		//Properties : key , value -> String¸¸ »ç¿ë °¡´É
+		//Properties : key , value -> Stringë§Œ ì‚¬ìš© ê°€ëŠ¥
 //		Properties prop = new Properties();
 //
 //		prop.setProperty("myid", "1234");
@@ -19,9 +19,9 @@ public class PropertiesTest {
 		
 //		Enumeration e = prop.propertyNames();		
 //		
-//		while(e.hasMoreElements()) { //°ªÀ» Ã¼Å©ÇÏ´Â ¿ª
-//			String element = (String)e.nextElement(); // key°ª
-//			String value = prop.getProperty(element); // value°ª
+//		while(e.hasMoreElements()) { //ê°’ì„ ì²´í¬í•˜ëŠ” ì—­
+//			String element = (String)e.nextElement(); // keyê°’
+//			String value = prop.getProperty(element); // valueê°’
 //			System.out.println(value);
 //		}
 		
@@ -30,29 +30,29 @@ public class PropertiesTest {
 		try {
 			prop.load(new FileInputStream("input.txt"));
 		}catch(IOException e) {
-			System.out.println("ÁöÁ¤ÇÑ ÆÄÀÏÀÌ ¾ø½À´Ï´Ù.");
-			System.exit(0); //ÇÁ·Î±×·¥ °­Á¦ Á¾·á
-		} //ÆÄÀÏÀ» ºÒ·¯ ¿Ã ¶§ »ı±â´Â ¿¹¿Ü ¹Ì¸® Ã³¸®ÇÏ´Â ÀÛ¾÷ 
+			System.out.println("ì§€ì •í•œ íŒŒì¼ì´ ì—†ìŠµë‹ˆë‹¤.");
+			System.exit(0); //í”„ë¡œê·¸ë¨ ê°•ì œ ì¢…ë£Œ
+		} //íŒŒì¼ì„ ë¶ˆëŸ¬ ì˜¬ ë•Œ ìƒê¸°ëŠ” ì˜ˆì™¸ ë¯¸ë¦¬ ì²˜ë¦¬í•˜ëŠ” ì‘ì—… 
 		
 		String name = prop.getProperty("name"); // Hong kil Dong
 		String[] data = prop.getProperty("data").split(","); 
-		                                     //    ¦¦ ,·Î ³ª´µ¾îÁø °ªÀ» ÂÉ°³¼­  ¹İÈ¯
+		                                     //    â”” ,ë¡œ ë‚˜ë‰˜ì–´ì§„ ê°’ì„ ìª¼ê°œì„œ  ë°˜í™˜
 		int max = 0;
 		int min = 0;
 		int sum = 0;
 		
 
-//		ÀÌ¸§
+//		ì´ë¦„
 //		max
 //		min
 //		sum
-//		Æò±Õ
+//		í‰ê· 
 		 
-		//¹®ÀÚ¿­ -> ¼ıÀÚ : Integer.parseInt(¹®ÀÚ¿­)
-		//¼ıÀÚ -> ¹®ÀÚ¿­ : String.valurOf(¼ıÀÚ)
+		//ë¬¸ìì—´ -> ìˆ«ì : Integer.parseInt(ë¬¸ìì—´)
+		//ìˆ«ì -> ë¬¸ìì—´ : String.valurOf(ìˆ«ì)
 		
 		for(int i=0; i<data.length; i++) {
-			int value = Integer.parseInt(data[i]); // ¹®ÀÚ¿­À» ¼ıÀÚ·Î ¹Ù²Ù´Â ÀÛ¾÷
+			int value = Integer.parseInt(data[i]); // ë¬¸ìì—´ì„ ìˆ«ìë¡œ ë°”ê¾¸ëŠ” ì‘ì—…
 			
 			if( i== 0) {
 				max = min = value;

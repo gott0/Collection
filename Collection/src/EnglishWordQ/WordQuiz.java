@@ -14,28 +14,28 @@ public class WordQuiz {
 		
 		w = new ArrayList<Word>();
 		
-		w.add(new Word("love","»ç¶û"));
-		w.add(new Word("animal","µ¿¹°"));
-		w.add(new Word("emotion","°¨Á¤"));
-		w.add(new Word("human","ÀÎ°£"));
-		w.add(new Word("stock","ÁÖ½Ä"));
-		w.add(new Word("trade","°Å·¡"));
-		w.add(new Word("society","»çÈ¸"));
-		w.add(new Word("baby","¾Æ±â"));
-		w.add(new Word("honey","²Ü"));
-		w.add(new Word("dall","ÀÎÇü"));
-		w.add(new Word("bear","°õ"));
-		w.add(new Word("picture","»çÁø"));
-		w.add(new Word("painting","±×¸²"));
-		w.add(new Word("fault","¿À·ù"));
-		w.add(new Word("example","º¸±â"));
-		w.add(new Word("eye","´«"));
-		w.add(new Word("statue","Á¶°¢»ó"));
+		w.add(new Word("love","ì‚¬ë‘"));
+		w.add(new Word("animal","ë™ë¬¼"));
+		w.add(new Word("emotion","ê°ì •"));
+		w.add(new Word("human","ì¸ê°„"));
+		w.add(new Word("stock","ì£¼ì‹"));
+		w.add(new Word("trade","ê±°ë˜"));
+		w.add(new Word("society","ì‚¬íšŒ"));
+		w.add(new Word("baby","ì•„ê¸°"));
+		w.add(new Word("honey","ê¿€"));
+		w.add(new Word("dall","ì¸í˜•"));
+		w.add(new Word("bear","ê³°"));
+		w.add(new Word("picture","ì‚¬ì§„"));
+		w.add(new Word("painting","ê·¸ë¦¼"));
+		w.add(new Word("fault","ì˜¤ë¥˜"));
+		w.add(new Word("example","ë³´ê¸°"));
+		w.add(new Word("eye","ëˆˆ"));
+		w.add(new Word("statue","ì¡°ê°ìƒ"));
 		
 	}
 	
-	private int makeExample(int ex[], int answerIndex) { // º¸±â ±¸¼ºÇÏ±â
-		int n[] = { -1, -1, -1, -1 }; // º¸±â¸¦ Ãâ·ÂÇÏ±âÀ§ÇÑ index¹øÈ£·Î È°¿ë
+	private int makeExample(int ex[], int answerIndex) { // ë³´ê¸° êµ¬ì„±í•˜ê¸°
+		int n[] = { -1, -1, -1, -1 }; // ë³´ê¸°ë¥¼ ì¶œë ¥í•˜ê¸°ìœ„í•œ indexë²ˆí˜¸ë¡œ í™œìš©
 		int index; //3  4   
 		
 		
@@ -43,20 +43,20 @@ public class WordQuiz {
 			do {
 				index = (int) (Math.random() * w.size()); // 0~16
 			} while (index == answerIndex || exists(n, index));
-			// ¦± Á¤´ä°ú °°Àº index¹øÈ£ÀÌ°Å³ª n¹è¿­ÀÌ ÀÌ¹Ì µé¾îÀÖ´Â °ªÀÌ¸é »ç¿ëºÒ°¡ ÆÇÁ¤
+			// â”— ì •ë‹µê³¼ ê°™ì€ indexë²ˆí˜¸ì´ê±°ë‚˜ në°°ì—´ì´ ì´ë¯¸ ë“¤ì–´ìˆëŠ” ê°’ì´ë©´ ì‚¬ìš©ë¶ˆê°€ íŒì •
 			
-			n[i] = index; //for¹® ¾È¿¡ ÀÖÀ½(while¹® ¾Æ´Ô!)
+			n[i] = index; //forë¬¸ ì•ˆì— ìˆìŒ(whileë¬¸ ì•„ë‹˜!)
 		}
 		
 		
 
 		for (int i = 0; i < n.length; i++) {
-			ex[i] = n[i]; // ¹è¿­ÀÇ º¹»ç
+			ex[i] = n[i]; // ë°°ì—´ì˜ ë³µì‚¬
 		}
-		return (int) (Math.random() * n.length); // 0 ~ 3 ex¹è¿­ÀÇ Á¤´äÀÌ µé¾î°¥ À§Ä¡°ª
+		return (int) (Math.random() * n.length); // 0 ~ 3 exë°°ì—´ì˜ ì •ë‹µì´ ë“¤ì–´ê°ˆ ìœ„ì¹˜ê°’
 	}
 
-	private boolean exists(int n[], int index) { // º¸±â°¡ Áßº¹µÇÁö ¾Êµµ·Ï ÇÏ±â
+	private boolean exists(int n[], int index) { // ë³´ê¸°ê°€ ì¤‘ë³µë˜ì§€ ì•Šë„ë¡ í•˜ê¸°
 		for (int i = 0; i < n.length; i++) {
 			if (n[i] == index) {
 				return true;
@@ -65,9 +65,9 @@ public class WordQuiz {
 		return false;
 	}
 	
-	public void run() { //°ÔÀÓ ½ÃÀÛÇÏ±â
-		System.out.println("[" + name + "]" + "ÀÇ ´Ü¾î Å×½ºÆ® °ÔÀÓ ½ÃÀÛ | -1À» ÀÔ·ÂÇÏ¸é °ÔÀÓ Á¾·á");
-		System.out.println("ÇöÀç" + w.size() + "°³ÀÇ ´Ü¾î°¡ ÀÖ½À´Ï´Ù");
+	public void run() { //ê²Œì„ ì‹œì‘í•˜ê¸°
+		System.out.println("[" + name + "]" + "ì˜ ë‹¨ì–´ í…ŒìŠ¤íŠ¸ ê²Œì„ ì‹œì‘ | -1ì„ ì…ë ¥í•˜ë©´ ê²Œì„ ì¢…ë£Œ");
+		System.out.println("í˜„ì¬" + w.size() + "ê°œì˜ ë‹¨ì–´ê°€ ìˆìŠµë‹ˆë‹¤");
 		Scanner sc = new Scanner(System.in);
 		
 		while (true) {
@@ -90,16 +90,16 @@ public class WordQuiz {
 				}
 				in--;
 				if(in == answerLoc) {
-					System.out.println("Á¤´äÀÔ´Ï´Ù!!");
+					System.out.println("ì •ë‹µì…ë‹ˆë‹¤!!");
 				}else {
-					System.out.println("ºĞ¹ßÇÏ¼¼¿ä!!");
+					System.out.println("ë¶„ë°œí•˜ì„¸ìš”!!");
 				}
 			}catch(InputMismatchException e) {
-				sc.next();  // ¹öÆÛ¸¦ ºñ¿öÁÖ´Â ¿ªÇÒ (¹®ÀÚ¿­ ÀÔ·Â ½Ã ÀÜÁ¸ ¹®ÀÚ°¡ ¹öÆÛ¿¡ Á¸ÀçÇÏ±â ¶§¹®)
-			   System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä!!");	
+				sc.next();  // ë²„í¼ë¥¼ ë¹„ì›Œì£¼ëŠ” ì—­í•  (ë¬¸ìì—´ ì…ë ¥ ì‹œ ì”ì¡´ ë¬¸ìê°€ ë²„í¼ì— ì¡´ì¬í•˜ê¸° ë•Œë¬¸)
+			   System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”!!");	
 			}
 		}
-		   System.out.println("[" + name + "]" + "¸¦ Á¾·áÇÕ´Ï´Ù");	
+		   System.out.println("[" + name + "]" + "ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤");	
 	}
 	
 	
