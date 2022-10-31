@@ -23,12 +23,10 @@ public class Student implements Comparable {
 		
 		if(o instanceof Student) {
 			Student tmp = (Student)o;
-			return this.ban - tmp.ban;  // ¿À¸§Â÷¼ø // 0:°°Àº °ª , ¾ç¼ö : ¾Õ¿¡ °ªÀÌ Å« °ª , À½¼ö: µŞ¿¡ °ªÀÌ Å« °ª
-			//return tmp.ban - this.ban;  // ³»¸³Â÷¼ø 
+			return this.ban - tmp.ban;  // ì˜¤ë¦„ì°¨ìˆœ // 0:ê°™ì€ ê°’ , ì–‘ìˆ˜ : ì•ì— ê°’ì´ í° ê°’ , ìŒìˆ˜: ë’·ì— ê°’ì´ í° ê°’
+			//return tmp.ban - this.ban;  // ë‚´ë¦½ì°¨ìˆœ 
 		}
 		
 		return -1;
 	}
-	
-	
 }

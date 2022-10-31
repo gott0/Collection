@@ -9,23 +9,23 @@ public class HashMapTest {
 
 	public static void main(String[] args) {
 		HashMap<String,String> map = new HashMap<String,String>();
-		       //  ¦£key: Áßº¹ ¾È µÊ
-		       //  |      ¦£value: Áßº¹°¡´É(intÅ¸ÀÔµµ °¡´ÉÇÏÁö¸¸ Á¦³×¸¯À¸·Î String°íÁ¤)
+		       //  â”Œkey: ì¤‘ë³µ ì•ˆ ë¨
+		       //  |      â”Œvalue: ì¤‘ë³µê°€ëŠ¥(intíƒ€ì…ë„ ê°€ëŠ¥í•˜ì§€ë§Œ ì œë„¤ë¦­ìœ¼ë¡œ Stringê³ ì •)
 		map.put("myid", "1234");
 		map.put("asdf", "1111");
-		map.put("asdf", "1234"); // key Áßº¹ ½Ã Ç×»ó ¸¶Áö¸· keyÀÇ value°¡ Ãâ·Â µÊ
+		map.put("asdf", "1234"); // key ì¤‘ë³µ ì‹œ í•­ìƒ ë§ˆì§€ë§‰ keyì˜ valueê°€ ì¶œë ¥ ë¨
 		
-		//keySet() : Å°°ª ÀüÃ¼¸¦ ¹İÈ¯ÇÑ´Ù.
+		//keySet() : í‚¤ê°’ ì „ì²´ë¥¼ ë°˜í™˜í•œë‹¤.
 		
 		Set<String> keys = map.keySet();
 		Iterator<String> it = keys.iterator();
-//        ¦¦ keySet()À¸·Î ¹İÈ¯ µÈ Å°°ªµéÀ» ÀĞ¾î¿Â´Ù.(keySet()Àº Å°°ªÀ» ºĞ·ù,iterator()Àº ±×·± Å°°ªµéÀ» ÀĞ´Â ¿ªÇÒ)
+//        â”” keySet()ìœ¼ë¡œ ë°˜í™˜ ëœ í‚¤ê°’ë“¤ì„ ì½ì–´ì˜¨ë‹¤.(keySet()ì€ í‚¤ê°’ì„ ë¶„ë¥˜,iterator()ì€ ê·¸ëŸ° í‚¤ê°’ë“¤ì„ ì½ëŠ” ì—­í• )
 		
-		/*Iterator´Â ÀÚ¹ÙÀÇ ÄÃ·º¼Ç ÇÁ·¹ÀÓ¿öÅ©¿¡¼­ ÄÃ·º¼Ç(Set, List, Map)¿¡ ÀúÀåµÇ¾î ÀÖ´Â ¿ä¼ÒµéÀ» ÀĞ¾î¿À´Â ¹æ¹ıÀ» Ç¥ÁØÈ­ÇÑ °ÍÀÌ´Ù.
+		/*IteratorëŠ” ìë°”ì˜ ì»¬ë ‰ì…˜ í”„ë ˆì„ì›Œí¬ì—ì„œ ì»¬ë ‰ì…˜(Set, List, Map)ì— ì €ì¥ë˜ì–´ ìˆëŠ” ìš”ì†Œë“¤ì„ ì½ì–´ì˜¤ëŠ” ë°©ë²•ì„ í‘œì¤€í™”í•œ ê²ƒì´ë‹¤.
 		  
-		  hasNext() : ÀĞ¾î¿Ã ¿ä¼Ò°¡ ³²¾ÆÀÖ´ÂÁö È®ÀÎÇÏ´Â ¸Ş¼ÒµåÀÌ´Ù. ¿ä¼Ò°¡ ÀÖÀ¸¸é true, ¾øÀ¸¸é false
-		     next() : ´ÙÀ½ µ¥ÀÌÅÍ¸¦ ¹İÈ¯ÇÑ´Ù.
-		   remove() : next()·Î ÀĞ¾î¿Â ¿ä¼Ò¸¦ »èÁ¦ÇÑ´Ù.*/
+		  hasNext() : ì½ì–´ì˜¬ ìš”ì†Œê°€ ë‚¨ì•„ìˆëŠ”ì§€ í™•ì¸í•˜ëŠ” ë©”ì†Œë“œì´ë‹¤. ìš”ì†Œê°€ ìˆìœ¼ë©´ true, ì—†ìœ¼ë©´ false
+		     next() : ë‹¤ìŒ ë°ì´í„°ë¥¼ ë°˜í™˜í•œë‹¤.
+		   remove() : next()ë¡œ ì½ì–´ì˜¨ ìš”ì†Œë¥¼ ì‚­ì œí•œë‹¤.*/
 	
 		
 		while(it.hasNext()) {
@@ -34,13 +34,13 @@ public class HashMapTest {
 		}
 		
 		
-		for(String key: map.keySet()){// Çâ»óµÈ for¹®À» È°¿ëÇÑ ¹æ¹ı
+		for(String key: map.keySet()){// í–¥ìƒëœ forë¬¸ì„ í™œìš©í•œ ë°©ë²•
 			System.out.println(key);
 		}
 		
 		System.out.println("=====================");
 		
-		//values() : values ÀüÃ¼¸¦ ¹İÈ¯ÇÑ´Ù.
+		//values() : values ì „ì²´ë¥¼ ë°˜í™˜í•œë‹¤.
 		Collection<String> values = map.values();
 		Iterator<String> itV = values.iterator();
 
@@ -51,11 +51,11 @@ public class HashMapTest {
 		
 		System.out.println("=====================");
 		
-		       // ¦£ key,value¸¦ ¸ğµÎ ¹İÈ¯  = Map.Entry<>
+		       // â”Œ key,valueë¥¼ ëª¨ë‘ ë°˜í™˜  = Map.Entry<>
 		Set<Map.Entry<String,String>> entry = map.entrySet();
 		Iterator<Map.Entry<String,String>> itE = entry.iterator();
 		
-		while(itE.hasNext()) {     //  ¦£ key, valueÀÇ ÁÖ¼Ò°ª
+		while(itE.hasNext()) {     //  â”Œ key, valueì˜ ì£¼ì†Œê°’
 			Map.Entry<String, String> ent = itE.next();
 			String key = ent.getKey();
 			String value = ent.getValue();
@@ -65,7 +65,7 @@ public class HashMapTest {
 		
 		System.out.println("=====================");
 
-		for(Map.Entry<String, String> ent : map.entrySet()){ // Çâ»óµÈ for¹®À» È°¿ëÇÑ ¹æ¹ı
+		for(Map.Entry<String, String> ent : map.entrySet()){ // í–¥ìƒëœ forë¬¸ì„ í™œìš©í•œ ë°©ë²•
 			String key = ent.getKey();
 			String value = ent.getValue();
 			System.out.println("[key]" + key +", [value]" + value);
@@ -76,24 +76,24 @@ public class HashMapTest {
 //		Scanner sc = new Scanner (System.in);
 //		
 //		while(true) {
-//			System.out.println("¾ÆÀÌµğ ÀÔ·Â: ");
+//			System.out.println("ì•„ì´ë”” ì…ë ¥: ");
 //			String id = sc.next();
 //			
-//			System.out.println("ºñ¹ø ÀÔ·Â: ");
+//			System.out.println("ë¹„ë²ˆ ì…ë ¥: ");
 //			String password = sc.next();
 //			
-//			//get(key) -> value°ª ¹İÈ¯
+//			//get(key) -> valueê°’ ë°˜í™˜
 //			//get("myid") -> "1234"
-//			//containKey(key) -> Á¸ÀçÀ¯¹« È®ÀÎ(truw,false)
+//			//containKey(key) -> ì¡´ì¬ìœ ë¬´ í™•ì¸(truw,false)
 //			
 //			if(!map.containsKey(id)) {
-//				System.out.println("¾ÆÀÌµğ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½ÃÀÔ·Â");
+//				System.out.println("ì•„ì´ë””ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œì…ë ¥");
 //				continue;
-//			}else {   //¦£valueÀ» ¹Ş¾Æ¿È(¹®ÀÚ¿­)
-//				if(!(map.get(id)).equals(password)) { // => StringÅ¸ÀÔÀÇ ºñ±³´Â .equals()»ç¿ë
-//					System.out.println("ºñ¹øÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½ÃÀÔ·Â");
+//			}else {   //â”Œvalueì„ ë°›ì•„ì˜´(ë¬¸ìì—´)
+//				if(!(map.get(id)).equals(password)) { // => Stringíƒ€ì…ì˜ ë¹„êµëŠ” .equals()ì‚¬ìš©
+//					System.out.println("ë¹„ë²ˆì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œì…ë ¥");
 //				}else {
-//					System.out.println("·Î±×ÀÎ ¼º°ø");
+//					System.out.println("ë¡œê·¸ì¸ ì„±ê³µ");
 //					break;
 //				}
 //			}
@@ -107,22 +107,22 @@ public class HashMapTest {
 		
 		/*Iterator
 
-		- Vector<E>, ArrayList<E>,LinkedList<E> °¡ »ó¼Ó¹Ş´Â ÀÎÅÍÆäÀÌ½º 
-		-¸®½ºÆ® ±¸Á¶ÀÇ ÄÃ·º¼Ç¿¡¼­ ¿ä¼ÒÀÇ ¼øÂ÷°Ë»öÀ» À§ÇÑ ¸Ş¼Òµå Æ÷ÇÔ
-		- iterator()¸¦ È£ÃâÇÏ¸é iterator °´Ã¼ ¹İÈ¯
-		-ÀÚ¹ÙÀÇ ÄÃ·º¼Ç¿¡ ÀúÀåµÇ¾î ÀÖ´Â ¿ä¼ÒµéÀ» ÀĞ¾î¿À´Â ¹æ¹ıÀÇ ÀÎÅÍÆäÀÌ½º
-		Áï ½±°Ô ÄÃ·º¼ÇÀ¸·ÎºÎÅÍ Á¤º¸¸¦ ¾ò¾î³»´Â ÀÎÅÍÆäÀÌ½º ÀÌ´Ù.
+		- Vector<E>, ArrayList<E>,LinkedList<E> ê°€ ìƒì†ë°›ëŠ” ì¸í„°í˜ì´ìŠ¤ 
+		-ë¦¬ìŠ¤íŠ¸ êµ¬ì¡°ì˜ ì»¬ë ‰ì…˜ì—ì„œ ìš”ì†Œì˜ ìˆœì°¨ê²€ìƒ‰ì„ ìœ„í•œ ë©”ì†Œë“œ í¬í•¨
+		- iterator()ë¥¼ í˜¸ì¶œí•˜ë©´ iterator ê°ì²´ ë°˜í™˜
+		-ìë°”ì˜ ì»¬ë ‰ì…˜ì— ì €ì¥ë˜ì–´ ìˆëŠ” ìš”ì†Œë“¤ì„ ì½ì–´ì˜¤ëŠ” ë°©ë²•ì˜ ì¸í„°í˜ì´ìŠ¤
+		ì¦‰ ì‰½ê²Œ ì»¬ë ‰ì…˜ìœ¼ë¡œë¶€í„° ì •ë³´ë¥¼ ì–»ì–´ë‚´ëŠ” ì¸í„°í˜ì´ìŠ¤ ì´ë‹¤.
 	 
-		iterator¸¦ ½±°Ô ºñÀ¯ÇÑ °ÍÀÌ ÀÖ´Ù.
-		-¿ì¸®°¡ Ã¥À» º¸°üÇÏ´Â Ã¥Àå(ÄÃ·º¼Ç)ÀÌ ÀÖ°í, ±×°÷¿¡´Â Ã¥(ÄÃ·º¼Ç ¾È¿¡ µé¾î°¥ °´Ã¼)ÀÌ ÀÖ´Ù.
-		-ÀÌ Ã¥ÀåÀº µµ¼­°ü »ç¼­(iterator)°¡ °ü¸®ÇÑ´Ù. 
-		-»ç¼­´Â ´Ü¼ø ¹«½ÄÇÑ ³à¼®ÀÌ¶ó Ã¥Àå Ã³À½ºÎÅÍ ³¡±îÁö ÇÑ¹ø¿¡ ÇÏ³ª¾¿ ¹Û¿¡ ¸ø°¡Á® ¿Â´Ù. 
+		iteratorë¥¼ ì‰½ê²Œ ë¹„ìœ í•œ ê²ƒì´ ìˆë‹¤.
+		-ìš°ë¦¬ê°€ ì±…ì„ ë³´ê´€í•˜ëŠ” ì±…ì¥(ì»¬ë ‰ì…˜)ì´ ìˆê³ , ê·¸ê³³ì—ëŠ” ì±…(ì»¬ë ‰ì…˜ ì•ˆì— ë“¤ì–´ê°ˆ ê°ì²´)ì´ ìˆë‹¤.
+		-ì´ ì±…ì¥ì€ ë„ì„œê´€ ì‚¬ì„œ(iterator)ê°€ ê´€ë¦¬í•œë‹¤. 
+		-ì‚¬ì„œëŠ” ë‹¨ìˆœ ë¬´ì‹í•œ ë…€ì„ì´ë¼ ì±…ì¥ ì²˜ìŒë¶€í„° ëê¹Œì§€ í•œë²ˆì— í•˜ë‚˜ì”© ë°–ì— ëª»ê°€ì ¸ ì˜¨ë‹¤. 
 
 		iterator method
-		1) hasNext(): ´ÙÀ½ ¿ä¼Ò¿¡ ÀĞ¾î ¿Ã ¿ä¼Ò°¡ ÀÖ´ÂÁö È®ÀÎ ÇÏ´Â ¸Ş¼Òµå ÀÖÀ¸¸é true, ¾øÀ¸¸é false ¸¦ ¹İÈ¯ÇÑ´Ù.
-		2) next(): ´ÙÀ½ ¿ä¼Ò¸¦ °¡Á®¿Â´Ù. 
-		3) remove(): next()·Î ÀĞ¾î¿Â ¿ä¼Ò¸¦ »èÁ¦ÇÑ´Ù.
-		¸Ş¼ÒµåÀÇ È£Ãâ ¼ø¼­´Â hasNext() -> next() -> remove() ÀÌ´Ù.*/
+		1) hasNext(): ë‹¤ìŒ ìš”ì†Œì— ì½ì–´ ì˜¬ ìš”ì†Œê°€ ìˆëŠ”ì§€ í™•ì¸ í•˜ëŠ” ë©”ì†Œë“œ ìˆìœ¼ë©´ true, ì—†ìœ¼ë©´ false ë¥¼ ë°˜í™˜í•œë‹¤.
+		2) next(): ë‹¤ìŒ ìš”ì†Œë¥¼ ê°€ì ¸ì˜¨ë‹¤. 
+		3) remove(): next()ë¡œ ì½ì–´ì˜¨ ìš”ì†Œë¥¼ ì‚­ì œí•œë‹¤.
+		ë©”ì†Œë“œì˜ í˜¸ì¶œ ìˆœì„œëŠ” hasNext() -> next() -> remove() ì´ë‹¤.*/
 		
 	} //main end
 

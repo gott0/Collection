@@ -2,7 +2,6 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
@@ -10,11 +9,4 @@ import lombok.ToString;
 public class Person {
 	String name;
 	int age;
-	
-	
-
-	
-	
-
-
 }

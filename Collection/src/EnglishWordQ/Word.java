@@ -10,7 +10,5 @@ import lombok.Setter;
 public class Word {
 	private String english;
 	private String korean;
-	
-	
 
 }
